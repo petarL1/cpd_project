@@ -1,11 +1,16 @@
 import React from "react";
 
-export default function FilterButton(props) {
+function FilterButton(props) {
   return (
-    <button type="button" className="btn toggle-btn" aria-pressed="true">
-      <span className="visually-hidden">Show </span>
-      <span> {props.name} </span>
-      <span className="visually-hidden"> tasks</span>
+    <button
+      type="button"
+      className="btn toggle-btn"
+      onClick={() => props.setFilter(props.name)}
+    >
+      <span>{props.name}</span>
     </button>
   );
 }
+
+
+export default FilterButton;
