@@ -1,38 +1,34 @@
 import React, {useState} from "react";
 
-function Todo(props){
+function TodoList(props){
     const [isEditing, setEditing] = useState(false);
-    const [newName, setNewName] = useState('');
+    const [newName, setNewName] = useState(props.name);
 
     function handleSubmit(e) {
-        e.preventDefault();
+        e.preventDefault();        
         props.editTask(props.id, newName);
-        setNewName("");
+        setNewName(newName);
         setEditing(false);
-      }
-      
+    }
+
       function handleChange(e) {
         setNewName(e.target.value);
       }
       
-      console.log(props.date)
     const editingTemplate = (
-        <form className="form-editing-main" onSubmit={handleSubmit}>
-          <div className="form-editing-group">
-            <label className="todo-label" htmlFor={props.id}>
-              New name for {props.name}
-            </label>
-            <input id={props.id} className="todo-text" type="text" value={newName} onChange={handleChange}/>
-          </div>
-          <div className="btn-group">
-            <button type="button" className="btn todo-cancel" onClick={() => setEditing(false)}>
-              Cancel
+      <div className="form-edit-main">
+        <form className="form-edit" onSubmit={handleSubmit}>
+            <input id={props.id} className="todo-label" required autoFocus autocomplete="off" defaultValue={"hello"} value={newName} onChange={handleChange}/>   
+          <div className="btn-group-edit">
+          <button type="submit" title="Confirm" className="btn edit-confirm" >
+            <i class="fa fa-check"></i>
             </button>
-            <button type="submit" className="btn btn-primary todo-edit">
-              Save
+            <button type="button" title="Cancel" className="btn edit-cancel" onClick={() => setEditing(false)}> 
+            <i class="fa fa-times"></i>
             </button>
-          </div>
+            </div>
         </form>
+        </div>
       );
       const viewTemplate = (
         <div className="form-view-main">
@@ -43,18 +39,20 @@ function Todo(props){
                 type="checkbox"
                 defaultChecked={props.completed}
                 onChange={() => props.toggleTaskCompleted(props.id)}
+                readOnly
               />
               </div>
-              <label className="todo-label" htmlFor={props.id}>
+              <label style={ props.completed ? {textDecoration:'line-through'} : {textDecoration:'none'}} className="todo-label" htmlFor={props.id} >
                 {props.name}
               </label>
               </div>
             <div className="btn-group">
-              <button type="button" className="btn todo-edit" onClick={()=> setEditing(true)}>
+              <button type="button" title="Edit" className="btn todo-edit" onClick={()=> setEditing(true)}>
               <i class="fa fa-edit"></i>
               </button>
               <button
                 type="button"
+                title="Delete"
                 className="btn todo-cancel"
                 onClick={() => props.deleteTask(props.id)}
               >
@@ -67,4 +65,4 @@ function Todo(props){
     return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
 }
 
-export default Todo;
+export default TodoList;

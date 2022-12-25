@@ -5,9 +5,7 @@ function Form(props){
 
     function handleSubmit(e) {
         e.preventDefault();
-        if(!name){
-            alert("Enter a name")
-        }else{
+        if(name){            
         props.addTask(name);
         setName("");
         }
@@ -23,6 +21,7 @@ function Form(props){
         <h2 className="label-wrapper">
         </h2>
         <input
+          required
           placeholder="Add a new task"
           type="text"
           className="form-input"
