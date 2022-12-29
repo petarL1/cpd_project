@@ -3,6 +3,10 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,6 +14,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin:0;
+  background-color:  #eae2b7;
+  background-image: url('../public/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 .btn {
@@ -99,6 +108,7 @@ min-height: 80vh;
 margin: 30px auto 30px auto;
 border-radius: 8px;
 box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);
+background-color: rgba(255,255,255,0.95);
 }
 
 input[type=checkbox] {
@@ -153,6 +163,7 @@ input[type=checkbox] {
   resize: none;
   outline: none;
   padding: 10px 10px 0px 30px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .edit-confirm:hover .fa-check{ 
@@ -202,16 +213,15 @@ li{
   display: flex;
   margin: auto;
   width:100vw;
-  background-color: #5aa0f0;
 }
 
 nav a{
   font-family: 'Oswald', sans-serif;
-  font-weight:500;
+  font-weight:600;
   display: inline;
   text-transform:uppercase;
   text-decoration:none;
-  color:#16151b;
+  color:#006AE8;
   margin:0 12px;
   font-size:20px;
   letter-spacing:1px;
@@ -220,14 +230,12 @@ nav a{
 
 a:hover{
     transition: all 0.2s ease;
-    color: #fff;
-    font-weight: bold;  
+    color: #539bf3;
+    font-weight: 600;  
     font-size: larger;
 }
 
 .header{
-  font-size: 25px;
-  font-weight: 700;
   background-image: linear-gradient(to left,#73c9b6,#606ba7);
   color: transparent;
   -webkit-background-clip: text;
@@ -235,10 +243,15 @@ a:hover{
   text-align: center;
   -webkit-user-select: none;
   user-select: none;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 30px; 
+  letter-spacing: -1px; 
 }
 .header img {
-  height: 35px;
+  height: 40px;
   padding-right: 10px;
+  color: #006AE8;
+  filter:saturate(3);
 }
 
 .filters{
@@ -350,4 +363,39 @@ a:hover{
 }
 .todoapp-main{
   width: 70vw;
+}
+.nav a{
+  color:rgb(255, 255, 255)
 }} 
+
+/* HOME ------------------------------------------------------------------------------ */
+
+.home-heading{
+  margin: auto;
+}
+
+.home-heading h1{
+  color: #111; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 75px; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  text-align: center; 
+}
+
+.home-heading h2{
+  color: #111; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 30px; 
+  font-weight: light; 
+  text-align: center; 
+}
+
+/* 404 ------------------------------------------------------------------------------- */
+
+.not-found-header{
+  color: #111; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 30px; 
+  text-align: center; 
+}

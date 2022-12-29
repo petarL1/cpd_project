@@ -6,6 +6,7 @@ import ToDo from './views/ToDo';
 import About from './views/About';
 import Notes from './views/Notes';
 import Calendar from './views/Calendar';
+import PageNotFound from './views/PageNotFound';
 
 const DATA=[]
 
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/todo" element={<ToDo tasks={DATA} />}></Route>
             <Route exact path="/notes" element={<Notes />}></Route>
             <Route exact path="/calendar" element={<Calendar />}></Route>
+            <Route exact path="*" element={<PageNotFound />} />
           </Routes>
         </div>
         </Router>
