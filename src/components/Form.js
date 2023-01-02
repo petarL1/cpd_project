@@ -31,7 +31,7 @@ function Form(props){
           onChange={handleChange}
         />
         <button type="submit" onClick={() => handleSubmit} className="btn btn-add">
-          <i class="fa fa-plus"></i>
+          <i className="fa fa-plus"></i>
         </button>
       </form>
       </div>

@@ -13,6 +13,7 @@ const FILTER_MAP = {
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
 const ToDo = (props) => {
+document.body.className="todo-body";
 const [tasks, setTasks] = useState(props.tasks);
 const [filter, setFilter] = useState('All');
 

@@ -21,10 +21,10 @@ function TodoList(props){
             <input id={props.id} className="todo-label" required autoFocus autocomplete="off" defaultValue={"hello"} value={newName} onChange={handleChange}/>   
           <div className="btn-group-edit">
           <button type="submit" title="Confirm" className="btn edit-confirm" >
-            <i class="fa fa-check"></i>
+            <i className="fa fa-check"></i>
             </button>
             <button type="button" title="Cancel" className="btn edit-cancel" onClick={() => setEditing(false)}> 
-            <i class="fa fa-times"></i>
+            <i className="fa fa-times"></i>
             </button>
             </div>
         </form>
@@ -48,7 +48,7 @@ function TodoList(props){
               </div>
             <div className="btn-group">
               <button type="button" title="Edit" className="btn todo-edit" onClick={()=> setEditing(true)}>
-              <i class="fa fa-edit"></i>
+              <i className="fa fa-edit"></i>
               </button>
               <button
                 type="button"
@@ -56,7 +56,7 @@ function TodoList(props){
                 className="btn todo-cancel"
                 onClick={() => props.deleteTask(props.id)}
               >
-                <i class="fa fa-trash"></i>
+                <i className="fa fa-trash"></i>
               </button>
             </div>
             </div>
