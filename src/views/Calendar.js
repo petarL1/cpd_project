@@ -1,9 +1,12 @@
-const Calendar = () => {
+import Calendar from "react-calendar";
+
+const CalendarComp = () => {
+    document.body.className="calendar-body";
     return ( 
-        <div className="home-heading">
-            <h1>CALENDAR</h1>
+        <div className="calendar-container">
+            <Calendar />
             </div>
      );
 }
  
-export default Calendar;
+export default CalendarComp;

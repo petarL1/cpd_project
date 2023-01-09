@@ -51,20 +51,33 @@ function Home(){
                         If you want to keep track of all of your tasks at once, you've come to the right place!
                         <li>&nbsp;</li>
                         <li>Keep track of your tasks with our To-do list.</li>
-                        <Link to={'/todo'} className="btn" style={{textDecoration:'none'}}>Go there now!</Link>
+                        <Link to={'/todo'} className="btn btn-sec1" style={{textDecoration:'none'}}>Go there now!</Link>
                     </p>
                 </div>
                 </div>
-                <div className="section-2"/> {/* Seperator */}
+                <div className="seperator"/>
                 <div className="section-3">
                 <div className="sec3-text">
                     <p>
-                        Want to learn more about us?<br /><br />
-                        Check out our About Us page right now!<br />
-                        <Link to={'/about'} className="btn" style={{textDecoration:'none'}}>Learn More</Link>
+                        Look at your upcoming events with our Calendar.<br /><br />
+                        Add events to certain dates or ranges and easily plan your future work.<br />
+                        <Link to={'/calendar'} className="btn btn-sec3" style={{textDecoration:'none'}}>Take me there!</Link>
                     </p>
                 </div>
                 <div className="sec3-img">
+                    <img src="https://blog.logrocket.com/wp-content/uploads/2021/08/react-calendar-css-styling.png" alt="be productive"></img>
+                </div>
+                </div>
+                <div className="seperator"/>
+                <div className="section-4">
+                <div className="sec4-text">
+                    <p>
+                        Want to learn more about us?<br /><br />
+                        Check out our About Us page right now!<br />
+                        <Link to={'/about'} className="btn btn-sec4" style={{textDecoration:'none'}}>Learn More</Link>
+                    </p>
+                </div>
+                <div className="sec4-img">
                     <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="be productive"></img>
                 </div>
                 </div>

@@ -14,9 +14,9 @@ const Navbar = () =>{
                     </nav>
                 </div>
         )
-    } else
+    } else if (location==="/about"){
     return(
-        <div className="navbar-todo">
+        <div className="navbar-about">
                 <nav className="navMenu">
                     <Link to='/'>Home</Link>
                     <Link to='/todo'>To-do list</Link>
@@ -24,7 +24,19 @@ const Navbar = () =>{
                     <Link to='/about'>About us</Link>
                 </nav>
             </div>
-    )
+    )} else {
+        return(
+            <div className="navbar-todo">
+                    <nav className="navMenu">
+                        <Link to='/'>Home</Link>
+                        <Link to='/todo'>To-do list</Link>
+                        <Link to='/calendar'>Calendar</Link>
+                        <Link to='/about'>About us</Link>
+                    </nav>
+                </div>
+        )
+    }
+
 }
 
 export default Navbar;
