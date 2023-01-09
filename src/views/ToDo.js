@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import Todo from '../components/TodoList';
+import React, {useState,useEffect} from 'react'
+import TodoList from '../components/TodoList';
 import Form from '../components/Form';
 import FilterButton from '../components/FilterButton';
 import { nanoid } from "nanoid";
@@ -12,10 +12,21 @@ const FILTER_MAP = {
   
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
-const ToDo = (props) => {
+const ToDo = () => {
 document.body.className="todo-body";
-const [tasks, setTasks] = useState(props.tasks);
+const [tasks, setTasks] = useState(()=>{
+  const savedTasks = localStorage.getItem("tasks");
+  if (savedTasks){
+    return JSON.parse(savedTasks);
+  }else{
+    return [];
+  }
+});
 const [filter, setFilter] = useState('All');
+
+useEffect(()=>{
+  localStorage.setItem("tasks",JSON.stringify(tasks));
+},[tasks]);
 
 const filterList = FILTER_NAMES.map((name) => (
     <FilterButton
@@ -59,9 +70,9 @@ const filterList = FILTER_NAMES.map((name) => (
   const taskList = tasks
   .filter(FILTER_MAP[filter])
   .map((task) => (
-  <Todo
+  <TodoList
     id={task.id}
-    name={task.name}
+    name={task.name.trim()}
     completed={task.completed}
     key={task.id}
     toggleTaskCompleted={toggleTaskCompleted}

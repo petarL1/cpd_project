@@ -15,6 +15,7 @@ function Form(props){
         setName(e.target.value);
     }
 
+    
     return(
     <div className="form-wrapper">
     <form onSubmit={handleSubmit}>

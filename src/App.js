@@ -8,9 +8,6 @@ import CalendarComp from './views/Calendar';
 import PageNotFound from './views/PageNotFound';
 import './calendar.css'; 
 
-
-const DATA=[]
-
 function App() {
     return (
       <Router>
@@ -19,7 +16,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
             <Route exact path="/about" element={<About />}></Route>
-            <Route exact path="/todo" element={<ToDo tasks={DATA} />}></Route>
+            <Route exact path="/todo" element={<ToDo />}></Route>
             <Route exact path="/calendar" element={<CalendarComp />}></Route>
             <Route exact path="*" element={<PageNotFound />} />
           </Routes>

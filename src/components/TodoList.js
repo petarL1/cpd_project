@@ -18,7 +18,7 @@ function TodoList(props){
     const editingTemplate = (
       <div className="form-edit-main">
         <form className="form-edit" onSubmit={handleSubmit}>
-            <input id={props.id} className="todo-label" required autoFocus autocomplete="off" defaultValue={"hello"} value={newName} onChange={handleChange}/>   
+            <input id={props.id} className="todo-label" required autoFocus autoComplete="off" value={newName} onChange={handleChange}/>   
           <div className="btn-group-edit">
           <button type="submit" title="Confirm" className="btn edit-confirm" >
             <i className="fa fa-check"></i>
