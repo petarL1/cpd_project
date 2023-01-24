@@ -356,10 +356,9 @@ li{
   color: rgb(1, 247, 247); 
   font-family: 'Helvetica Neue', sans-serif; 
   font-size:calc(32px + 2vw);
-  font-weight: bold; 
   letter-spacing: -1px; 
   text-align: center; 
-  -webkit-text-stroke:2px #111;
+  -webkit-text-stroke:0.02em #111;
   text-transform: uppercase;
   -webkit-user-select: none;
   user-select: none;
@@ -371,7 +370,7 @@ li{
   font-size:calc(20px + 1.8vw);
   font-weight: light; 
   text-align: center; 
-  -webkit-text-stroke:1px #111;
+  -webkit-text-stroke:0.02em #111;
   -webkit-user-select: none;
   user-select: none;
   margin:0;
@@ -667,7 +666,6 @@ li{
   text-align: center; 
 }
 /* CALENDAR ----------------------------------------------- */
-
 .calendar-body{
   background-image: url('../public/bg.jpg');
   background-repeat: no-repeat;
@@ -679,6 +677,7 @@ li{
   width :-moz-fit-content;
   width: fit-content;
   max-width: 100%;
+  display: flex;
   margin: 8vh auto 1vh auto;
 }
 
@@ -687,6 +686,7 @@ li{
   font-family: 'Helvetica Neue', sans-serif; 
   font-size: 25px;
   text-align: center;
+  margin: 5px;
 }
 
 /* MEDIA QUERIES ---------------------------------------------- */
@@ -732,9 +732,11 @@ li{
   .footer{
     max-height: 12vh;
     font-size:calc(14px + 0.8vw);
+    font-size: 1.6vw;
   }
   .about-footer{
     font-size:calc(14px + 0.8vw);
+    font-size: 1.6vw;
   }
   .about-wrapper{
   display: flex;
@@ -756,6 +758,15 @@ li{
     width: 30%;
     height: 30%;
     margin-bottom: 10px;
+  }
+  .btn-sec1{
+    font-size: 2vw;
+  }
+  .btn-sec2{
+    font-size: 2vw;
+  }
+  .btn-sec3{
+    font-size: 2vw;
   }
 }
 
@@ -828,6 +839,7 @@ li{
 .sec1-text{
   width: 100%;
   text-align: center;
+  font-size: 3vw;
 }
 
 .section-2{
@@ -845,6 +857,7 @@ li{
 .sec2-text{
   width: 100%;
   text-align: center;
+  font-size: 3vw;
 }
 
 .section-3{
@@ -862,6 +875,7 @@ li{
 .sec3-text{
   width: 100%;
   text-align: center;
+  font-size: 3vw;
 }} 
 
 @media screen and (max-width:320px){
@@ -870,9 +884,6 @@ li{
   }
   .home-heading h2{
     font-size:calc(20px + 0.8vw);
-  }
-  p{
-    font-size:calc(9px + 0.8vw);
   }
 }
 
