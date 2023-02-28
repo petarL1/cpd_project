@@ -105,7 +105,7 @@ body {
 padding-top: 15px;
 align-items: center;
 justify-content: center;
-width: 50vw;
+width: 55vw;
 min-height: 80vh;
 margin: 30px auto 30px auto;
 border-radius: 8px;
@@ -549,7 +549,7 @@ li{
 /* ABOUT US ------------------------------------*/
 
 .about-body{
-  background-color: rgb(212, 212, 212);
+  background-color: rgb(243, 243, 243);
   min-height: 500px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -691,6 +691,12 @@ li{
 
 /* MEDIA QUERIES ---------------------------------------------- */
 
+@media screen and (max-width:1360px){
+  .todoapp-main{
+    width:65vw;
+  }
+}
+
 @media screen and (max-width:760px){
   .navbar-todo a{
     display:block;
@@ -720,9 +726,6 @@ li{
     padding:0;
   }
 
-  .todoapp-main{
-    width: 65vw;
-  }
   .form-edit{
     grid-template-columns: 85% 15%;
   }
@@ -768,6 +771,9 @@ li{
   .btn-sec3{
     font-size: 2vw;
   }
+  .todoapp-main{
+    width: 75vw;
+  }
 }
 
  @media screen and (min-width:1360px){
@@ -787,40 +793,16 @@ li{
   }
 }
 
-@media screen and (max-width:500px){
-.filters{
-  flex-direction: column;
-}
-.toggle-btn:first-of-type{
-  border-radius: 3px;
-}
 
-.toggle-btn:nth-child(2){
-  word-wrap: break-word;
-}
-.toggle-btn:last-of-type{
-  border-radius: 3px;
-  word-wrap: break-word;
-}
-.toggle-btn{
-  width:50%;
-}
-.form-input{
-  display:block;
-}
+@media screen and (max-width:500px){
+.todoapp-main{
+  width: 80vw;
+}  
+
 .form-input:placeholder-shown{
   text-overflow: ellipsis;
 }
- .btn-add{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto;
-  border-radius: 4px;
-}
-.todoapp-main{
-  width: 70vw;
-}
+
 .nav a{
   color:rgb(255, 255, 255)
 }
@@ -890,5 +872,46 @@ li{
 @media screen and (max-width:1440px){
   .about-text p{
     font-size:calc(10px + 0.8vw);
+  }
+}
+
+@media screen and  (max-width:400px) {
+  .filters{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .toggle-btn:first-of-type{
+    border-radius: 5px;
+    margin-bottom: 1px;
+    width:20%;
+  }
+  
+  .toggle-btn:nth-child(2){
+    word-wrap: break-word;
+    border-radius: 5px;
+    width: 40%;
+  }
+  .toggle-btn:last-of-type{
+    margin-top:1px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    width:60%;
+  }
+}
+
+@media screen and  (max-width:270px) {
+  .filters{
+   flex-direction: column;
+  }
+  .toggle-btn:first-of-type{
+    width: 60%;
+  }
+  
+  .toggle-btn:nth-child(2){
+    width: 60%;
+  }
+  .toggle-btn:last-of-type{
+    width: 60%;
   }
 }
