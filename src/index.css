@@ -324,7 +324,7 @@ li{
   display: inline;
   text-transform:uppercase;
   text-decoration:none;
-  color:rgb(1, 247, 247); 
+  color:#d0f8f2;
   margin:0 12px;
   font-size:20px;
   letter-spacing:1px;
@@ -333,7 +333,7 @@ li{
 
 .navbar-home a:hover{
     transition: all 0.2s ease;
-    color: #006AE8;
+    color: #549aaa;
     font-weight: 600;  
     font-size: larger;
 }
@@ -353,7 +353,7 @@ li{
 }
 
 .home-heading h1{
-  color: rgb(1, 247, 247); 
+  color: #bce7e1;
   font-family: 'Helvetica Neue', sans-serif; 
   font-size:calc(32px + 2vw);
   letter-spacing: -1px; 
@@ -365,7 +365,7 @@ li{
 }
 
 .home-heading h2{
-  color: rgb(0, 217, 255); 
+  color: #addfd7;
   font-family: 'Helvetica Neue', sans-serif; 
   font-size:calc(20px + 1.8vw);
   font-weight: light; 
@@ -385,7 +385,7 @@ li{
 }
 
 .section-1{
-  background-color: #c4ffff;
+  background-color: #b8d7df;
   padding: 50px 20px;
 }
 
@@ -428,19 +428,19 @@ li{
 }
 
 .section-2{
-  background-color: #bd8d46;
+  background-color: #a7bcb9;
   padding:50px 20px;
 }
 
 .btn-sec2{
-  background-color: #a75b05;
+  background-color: #53746f;
   margin-top: 10px;
   font-size: 1vw;
   padding:10px;
 }
 
 .btn-sec2:hover{
-  background-color: #b9690e;
+  background-color: #7e9b96;
 }
 
 .sec2-img{
@@ -469,19 +469,19 @@ li{
 }
 
 .section-3{
-  background-color: #95b866;
+  background-color: #e0ebeb; 
   padding:50px 20px;
 }
 
 .btn-sec3{
-  background-color: #016332;
+  background-color: #6d6d6d; 
   margin-top: 10px;
   font-size: 1vw;
   padding:10px;
 }
 
 .btn-sec3:hover{
-  background-color: #048544;
+  background-color: #c6caca; 
 }
 
 .sec3-img{
@@ -792,6 +792,21 @@ li{
   margin-top: 0;
   min-height: 70vh;
 }  
+.footer{
+  font-size: 2.1vw;
+}
+
+.btn-sec1{
+  font-size: 3vw;
+}
+
+.btn-sec2{
+  font-size: 3vw;
+}
+
+.btn-sec3{
+  font-size: 3vw;
+}
 
 .navbar-todo a{
   color:#00c3ff;
@@ -812,15 +827,10 @@ li{
   justify-content: center;  
 }
 
-.sec1-img{
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .sec1-text{
   width: 100%;
   text-align: center;
-  font-size: 3vw;
+  font-size: 4.2vw;
 }
 
 .section-2{
@@ -830,15 +840,10 @@ li{
   justify-content: center;  
 }
 
-.sec2-img{
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .sec2-text{
   width: 100%;
   text-align: center;
-  font-size: 3vw;
+  font-size: 4.2vw;
 }
 
 .section-3{
@@ -848,15 +853,10 @@ li{
   justify-content: center;  
 }
 
-.sec3-img{
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .sec3-text{
   width: 100%;
   text-align: center;
-  font-size: 3vw;
+  font-size: 4.2vw;
 }
 .seperator{
   height:10vh;
