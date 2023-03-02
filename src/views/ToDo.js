@@ -14,6 +14,7 @@ const FILTER_NAMES = Object.keys(FILTER_MAP);
 
 const ToDo = () => {
 document.body.className="todo-body";
+const [filter, setFilter] = useState('All');
 const [tasks, setTasks] = useState(()=>{
   const savedTasks = localStorage.getItem("tasks");
   if (savedTasks){
@@ -22,7 +23,6 @@ const [tasks, setTasks] = useState(()=>{
     return [];
   }
 });
-const [filter, setFilter] = useState('All');
 
 useEffect(()=>{
   localStorage.setItem("tasks",JSON.stringify(tasks));
@@ -60,16 +60,14 @@ const filterList = FILTER_NAMES.map((name) => (
   function editTask(id, newName) {
     const editedTaskList = tasks.map((task) => {
       if (id === task.id) {
-        return {...task, name: newName}
+        return {...task, name: newName, completed:false}
       }
       return task;
     });
     setTasks(editedTaskList);
   }
   
-  const taskList = tasks
-  .filter(FILTER_MAP[filter])
-  .map((task) => (
+  const taskList = tasks.filter(FILTER_MAP[filter]).map((task) => (
   <TodoList
     id={task.id}
     name={task.name.trim()}

@@ -18,7 +18,7 @@ body {
 }
 
 .todo-body{
-  background-image: url('../public/bg.jpg');
+   background-image: url('../public/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -385,7 +385,7 @@ li{
 }
 
 .section-1{
-  background-color: #66b8b8;
+  background-color: #c4ffff;
   padding: 50px 20px;
 }
 
@@ -543,7 +543,7 @@ li{
 }
 
 .scroll-btn:hover {
-  background-color: rgb(9, 170, 199); 
+  background-color: rgb(76, 78, 78); 
 }
 
 /* ABOUT US ------------------------------------*/
@@ -657,14 +657,6 @@ li{
   margin: auto;
 }
 
-/* 404 ------------------------------------------------------------------------------- */
-
-.not-found-header{
-  color: #111; 
-  font-family: 'Helvetica Neue', sans-serif; 
-  font-size: 30px; 
-  text-align: center; 
-}
 /* CALENDAR ----------------------------------------------- */
 .calendar-body{
   background-image: url('../public/bg.jpg');
@@ -797,7 +789,13 @@ li{
 @media screen and (max-width:500px){
 .todoapp-main{
   width: 80vw;
+  margin-top: 0;
+  min-height: 70vh;
 }  
+
+.navbar-todo a{
+  color:#00c3ff;
+}
 
 .form-input:placeholder-shown{
   text-overflow: ellipsis;
@@ -806,6 +804,7 @@ li{
 .nav a{
   color:rgb(255, 255, 255)
 }
+
 .section-1{
   display: flex;
   flex-direction: column;
@@ -858,7 +857,11 @@ li{
   width: 100%;
   text-align: center;
   font-size: 3vw;
-}} 
+}
+.seperator{
+  height:10vh;
+}
+} 
 
 @media screen and (max-width:320px){
   .home-heading h1{

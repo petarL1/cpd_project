@@ -35,8 +35,8 @@ function Home(){
     document.body.className="home-body";
     
     function topFunction() {
-    document.documentElement.scrollTop = 0; //OTHER BROWSERS
-    document.body.scrollTop = 0; //SAFARI
+    document.documentElement.scrollTop = 0; 
+    document.body.scrollTop = 0; //Safari
 };
     return(
         <div className="home-main">
